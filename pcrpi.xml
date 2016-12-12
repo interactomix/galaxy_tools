@@ -1,0 +1,25 @@
+<tool id="interactomix_pcrpi" name="PCRPI" version="0.1">
+	<description>
+	</description>
+	<command interpreter="sh">
+		pcrpi.sh $pdbfile $chainid $bayesian_type $training_set $output
+	</command>
+	<environment_variables>
+		<environment_variable name="TERM">linux</environment_variable>
+	</environment_variables>
+	<inputs>
+		<param format="pdb" type="data" name="pdbfile" label="PDB File"/>
+		<param type="text" size="1" name="chainid" label="Chain ID"/>
+		<param type="select" label="Bayesian Network Type" name="bayesian_type">
+			<option value="naive">Naive</option>
+			<option value="expert">Expert</option>
+		</param>
+		<param type="select" label="Training Set Type" name="training_set">
+			<option value="Ab+">Ab+</option>
+			<option value="Ab-">Ab-</option>
+		</param>
+	</inputs>
+	<outputs>
+		<data format="tabular" name="output" />
+	</outputs>
+</tool>
