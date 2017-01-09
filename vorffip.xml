@@ -1,0 +1,17 @@
+<tool id="interactomix_vorffip" name="VORFFIP" version="0.1">
+	<description>
+	</description>
+	<command interpreter="sh">
+		vorffip.sh $pdbfile $fb_output $pdb_output
+	</command>
+	<environment_variables>
+		<environment_variable name="TERM">linux</environment_variable>
+	</environment_variables>
+	<inputs>
+		<param format="pdb" type="data" name="pdbfile" label="PDB File"/>
+	</inputs>
+	<outputs>
+		<data format="tabular" name="fb_output" />
+		<data format="pdb" name="pdb_output" />
+	</outputs>
+</tool>
