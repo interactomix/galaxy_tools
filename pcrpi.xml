@@ -22,4 +22,7 @@
 	<outputs>
 		<data format="tabular" name="output" />
 	</outputs>
+	<help>
+	  .. include:: ./help/pcrpi.rst
+	</help>
 </tool>
