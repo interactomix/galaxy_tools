@@ -32,7 +32,7 @@ evolutionary information by using `Bayesian
 Networks <http://en.wikipedia.org/wiki/Bayesian_network>`__. Figure 1
 shows an overall description of the prediction process.
 
-.. image:: .pcrpi_slide1.jpg
+.. image:: pcrpi_slide1.jpg
    :height: 500px
 
 Figure 1. Overall description of the prediction process `(click here to
@@ -58,7 +58,7 @@ Interface residue attributes
    centered on the carbon alpha of the given residue. The average number
    of contacts by residue type is shown in table 1.
 
-.. image:: .pcrpi_table1.jpg
+.. image:: pcrpi_table1.jpg
    :height: 500px
 
    Table 1. (a) Average; (b) Standard deviation 
