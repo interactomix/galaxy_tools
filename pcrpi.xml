@@ -22,7 +22,7 @@
 	<outputs>
 		<data format="tabular" name="output" />
 	</outputs>
-	<help>
+	<help><![CDATA[
 General Information
 ^^^^^^^^^^^^^^^^^^^
 PCRPi is a method for predicting critical residues (i.e. hot spot
@@ -32,7 +32,7 @@ evolutionary information by using `Bayesian
 Networks <http://en.wikipedia.org/wiki/Bayesian_network>`__. Figure 1
 shows an overall description of the prediction process.
 
-.. image:: ./help/pcrpi_slide1.jpg
+.. image:: .pcrpi_slide1.jpg
    :height: 500px
 
 Figure 1. Overall description of the prediction process `(click here to
@@ -58,7 +58,7 @@ Interface residue attributes
    centered on the carbon alpha of the given residue. The average number
    of contacts by residue type is shown in table 1.
 
-.. image:: ./help/pcrpi_table1.jpg
+.. image:: .pcrpi_table1.jpg
    :height: 500px
 
    Table 1. (a) Average; (b) Standard deviation 
@@ -303,5 +303,5 @@ References
    binding energy hot spots in protein-protein complexes. Proc Natl Acad
    Sci U S A, 99, 14116-14121. `Robetta-Ala
    web-server <http://robetta.bakerlab.org/alascanqueue.jsp>`__
-	</help>
+	]]></help>
 </tool>
