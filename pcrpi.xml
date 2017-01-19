@@ -134,18 +134,19 @@ describing the method.
 
 --------------
 
-How to use the server
-^^^^^^^^^^^^^^^^^^^^^
+Inputs
+^^^^^^
 
-PCRPi Webserver has a user friendly and simple interface. In order to
-use the server you only need to provide either:
-The PDB code of the protein complex of interest (e.g. 2uzi) or upload
-the coordinates of the protein complex (`PDB <http://www.rcsb.org>`__
+You need to upload the coordinates of the protein complex (`PDB <http://www.rcsb.org>`__
 format only!) and provide the chain ID (as in the PDB file) of the
-protein in the complex that want to be analyzed. Alternatively, users
-can select the type of Bayesian Network to be use (i.e. naive or expert
+protein in the complex that you want to be analyzed. Alternatively, users
+can select the type of Bayesian Network to be used (i.e. naive or expert
 and the dataset used to train the system (i.e. Ab+ or Ab- dataset), see
 below `ADVANCED PARAMETERS <#advanced>`__.
+
+Outputs
+^^^^^^^
+
 As a result, users will get a list of interface residues sorted by the
 probability of being critical for the interaction (i.e. higher
 probability would mean that the residue is indeed important in the
@@ -189,19 +190,6 @@ above.
 
 --------------
 
-Retrieve your prediction
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-At the time of the submission an unique job identification code will be
-assigned to the task. The format of the job identification code is
-PCRPi\_XXXXXXXX where XXXXXXXX is an unique string combination of
-letters and number. To retrieve the results or check the progress of the
-prediction process simply enter the full job identification code
-(including the PCRPi\_ prefix) in the appropiate field at the submission
-web-site.
-
---------------
-
 Errors during prediction
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -228,12 +216,7 @@ the prediction process and are the following ones:
    any sequences with significant E-value, and as some of the measures
    are evolutionary-based and require the construction of a sequence
    profile, the prediction process will abort.
-3. Other unlikely situations: Unable to connect to centralized DBs
-   and/or queue system due to temporary network failure, machine
-   shutdown, etc.
-
-In any case the prediction process is fully logged and log file is
-provided to users for their inspection.
+3. Other unlikely situations.
 
 --------------
 
