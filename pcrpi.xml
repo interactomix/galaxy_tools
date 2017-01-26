@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command interpreter="sh">
-		pcrpi.sh $pdbfile $chainid $bayesian_type $training_set $output
+		pcrpi.sh $pdbfile $chainid $bayesian_type $training_set $results_output $pdb_output
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
@@ -20,7 +20,8 @@
 		</param>
 	</inputs>
 	<outputs>
-		<data format="tabular" name="output" />
+		<data format="tabular" name="results_output" />
+		<data format="pdb" type="data" name="pdb_output" />
 	</outputs>
 	<help><![CDATA[
 General Information

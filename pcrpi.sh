@@ -23,3 +23,4 @@ for f in "run.sge.log" "input.org.pdb" "input.clean.pdb" "b_factors.pdb" \
 done
 
 $CP ${output_dir}/results.txt $5
+$CP ${output_dir}/b_factors.pdb $6
