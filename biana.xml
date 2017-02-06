@@ -1,0 +1,57 @@
+<tool id="interactomix_biana" name="BIANA" version="0.1">
+	<description>
+	</description>
+	<command interpreter="sh">
+		./biana.sh $iseed $radius $stype $ttype $taxid $r $out_nodes $out_edges $out_translations
+	</command>
+	<environment_variables>
+		<environment_variable name="TERM">linux</environment_variable>
+	</environment_variables>
+	<inputs>
+		<param name="iseed" type="data" label="Seeds"/>
+		<param name="radius" type="integer" value="0" min="0" max="4" label="Radius"/>
+		<param name="stype" type="select" label="Seed Type">
+			<option value="accessionnumber">Accession Number</option>
+			<option value="uniprotaccession">Uniprot Accession Number</option>
+			<option value="uniprotentry">Uniprot Entry</option>
+			<option value="geneid">Gene ID</option>
+			<option value="genesymbol">Gene Symbol</option>
+			<option value="hgnc">HGNC</option>
+			<option value="pdb">PDB</option>
+			<option value="proteinsequence">Protein Sequence</option>
+		</param>
+		<param name="ttype" type="select" label="Output translation file Type">
+			<option value="accessionnumber">Accession Number</option>
+			<option value="uniprotaccession">Uniprot Accession Number</option>
+			<option value="uniprotentry">Uniprot Entry</option>
+			<option value="geneid">Gene ID</option>
+			<option value="genesymbol">Gene Symbol</option>
+			<option value="hgnc">HGNC</option>
+			<option value="pdb">PDB</option>
+			<option value="proteinsequence">Protein Sequence</option>
+		</param>
+		<param name="taxid" type="select" label="Taxonomy Code">
+			<option value="9606">Homo Sapiens</option>
+			<option value="10090">Mus Musculus</option>
+			<option value="10116">Rattus Norvegicus</option>
+			<option value="7955">Danio Rerio</option>
+			<option value="7227">Drosophila Melanogaster</option>
+			<option value="559292">Saccharomyces Cerevisiae</option>
+			<option value="3702">Arabidopsis Thaliana</option>
+		</param>
+		<param name="r" type="select" label="Method Restrections">
+			<option value="">All available</option>
+			<option value="-rY2H">Two hybrid</option>
+			<option value="-rAFF">Affinity methods</option>
+			<option value="-eY2H">All except two hybrid</option>
+			<option value="-eAFF">All except affinity methods</option>
+		</param>
+	</inputs>
+	<outputs>
+		<data name="out_nodes" format="txt" />
+		<data name="out_edges" format="txt" />
+		<data name="translations" format="txt" />
+	</outputs>
+	<help><![CDATA[
+	]]></help>
+</tool>
