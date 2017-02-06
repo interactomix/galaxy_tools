@@ -14,4 +14,24 @@
 		<data format="tabular" name="fb_output" />
 		<data format="pdb" name="pdb_output" />
 	</outputs>
+	<help><![CDATA[
+General Information
+^^^^^^^^^^^^^^^^^^^
+VORFFIP is a tool for protein binding side prediction.  Users have to provide
+the coordinates of the protein to use the server.  Galaxy provides a user
+friendly way to do this.
+
+Inputs
+^^^^^^
+The user must provide a file in the `pdb format <http://www.rcsb.org/>`__
+representing the structure of
+a protein.  Only the coordinates section of the pdb file is mandatory.  If
+several chains are submited in the same file, VORFFIP will analyse the protein
+complex as a single protein, i.e. the residue properties will be calculated
+considering all chains as a single one.
+
+Outputs
+^^^^^^^
+TODO
+	]]></help>
 </tool>
