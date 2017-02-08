@@ -50,7 +50,7 @@
 	<outputs>
 		<data name="out_nodes" format="txt" />
 		<data name="out_edges" format="txt" />
-		<data name="translations" format="txt" />
+		<data name="out_translations" format="txt" />
 	</outputs>
 	<help><![CDATA[
 	]]></help>
