@@ -21,7 +21,7 @@
 			<option value="PFAM">PFAM</option>
 			<option value="CATH">CATH</option>
 		</param>
-		<param name="cost" type="integer"/>
+		<param name="cost" type="integer" label="Cost" value="0"/>
 	</inputs>
 	<outputs>
 		<data name="out_xml" format="xml"/>
