@@ -1,0 +1,31 @@
+<tool id="interactomix_iloops" name="ILoops" version="0.1">
+	<description>
+	</description>
+	<command interpreter="sh">
+		/interactomix/bin-tools/iLoops13/venv/bin/python /interactomix/bin-tools/iLoops.py -f $fasta -q $query -j $job_dir -g $grouping -d $domain_type -b -c $cost -x $out_xml 
+	</command>
+	<environment_variables>
+		<environment_variable name="TERM">linux</environment_variable>
+	</environment_variables>
+	<inputs>
+		<param name="fasta" type="data" format="fasta" label="Fasta Sequences"/>
+		<param name="query" type="data" label="Query Protein Pair"/>
+		<param name="grouping" type="select" label="Grouping">
+			<option value="lg">lg</option>
+			<option value="lgd">lgd</option>
+			<option value="dg">dg</option>
+			<option value="all">all</option>
+		</param>
+		<param name="domain" type="select" label="Domain Type">
+			<option value="SCOP">SCOP</option>
+			<option value="PFAM">PFAM</option>
+			<option value="CATH">CATH</option>
+		</param>
+		<param name="cost" type="integer"/>
+	</inputs>
+	<outputs>
+		<data name="out_xml" format="xml"/>
+	</outputs>
+	<help><![CDATA[
+	]]></help>
+</tool>
