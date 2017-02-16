@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command interpreter="sh">
-		python /interactomix/bin-tools/BADock.py -a $struct_a -b $struct_b -o $out -x $out_xml 
+		/usr/bin/python /interactomix/bin-tools/BADock.py -a $struct_a -b $struct_b -o $out -x $out_xml 
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
