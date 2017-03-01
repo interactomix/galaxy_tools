@@ -37,7 +37,7 @@ rbs_result=$(ls "${output_dir}/PDB/RESULT/*.rbs.pdb")
 
 for f in $pbs_tab_result $ebs_tab_result $dbs_tab_result $rbs_tab_result $pbs_result $ebs_result $dbs_result $rbs_result; do
   if [ -f "${f}"]; then
-    cp "${f}" $2
+    cp "${f}" "$2"
   else
     exit 1
   fi
