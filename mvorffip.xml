@@ -1,0 +1,45 @@
+<tool id="interactomix_vorffip" name="VORFFIP" version="0.1">
+	<description>
+	</description>
+	<command interpreter="sh">
+		vorffip.sh $pdbfile \
+			$pbs_tab_output $ebs_tab_output $dbs_tab_output $rbs_tab_output \
+			$pbs_output $ebs_output $dbs_output $rbs_output
+	</command>
+	<environment_variables>
+		<environment_variable name="TERM">linux</environment_variable>
+	</environment_variables>
+	<inputs>
+		<param format="pdb" type="data" name="pdbfile" label="PDB File"/>
+	</inputs>
+	<outputs>
+		<data format="tabular" name="pbs_tab_output" />
+		<data format="tabular" name="ebs_tab_output" />
+		<data format="tabular" name="dbs_tab_output" />
+		<data format="tabular" name="rbs_tab_output" />
+		<data format="pdb" name="pbs_output" />
+		<data format="pdb" name="ebs_output" />
+		<data format="pdb" name="dbs_output" />
+		<data format="pdb" name="rbs_output" />
+	</outputs>
+	<help><![CDATA[
+General Information
+^^^^^^^^^^^^^^^^^^^
+VORFFIP is a tool for protein binding side prediction.  Users have to provide
+the coordinates of the protein to use the server.  Galaxy provides a user
+friendly way to do this.
+
+Inputs
+^^^^^^
+The user must provide a file in the `pdb format <http://www.rcsb.org/>`__
+representing the structure of
+a protein.  Only the coordinates section of the pdb file is mandatory.  If
+several chains are submited in the same file, VORFFIP will analyse the protein
+complex as a single protein, i.e. the residue properties will be calculated
+considering all chains as a single one.
+
+Outputs
+^^^^^^^
+TODO
+	]]></help>
+</tool>
