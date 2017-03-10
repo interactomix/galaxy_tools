@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command interpreter="sh">
-		/usr/bin/python /interactomix/bin-tools/BADock.py -a $struct_a -b $struct_b -o $out -x $out_xml 
+		sh ./badock.sh $struct_a $struct_b $out_xml 
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
@@ -12,7 +12,6 @@
 		<param name="struct_b" type="data" format="pdb" label="Structure B"/>
 	</inputs>
 	<outputs>
-		<data name="out"/>
 		<data name="out_xml" format="xml"/>
 	</outputs>
 	<help><![CDATA[
