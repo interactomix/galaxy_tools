@@ -1,8 +1,8 @@
 #!/bin/sh
 # Create a temporary file
-output_dir=$(mkdemp -d /interactomix/output-tools/BADOCK/XXXXXX)
+output_dir=$(sg interactomix -c "mktemp -d /interactomix/outputs-tools/BADOCK/XXXXXX")
 cd "$output_dir"
-python2.7 /interactomix/bin/BADock/BADock.py -a $1 -b $2 -o ./ -x xml_out 
+sg interactomix -c "python2.7 /interactomix/bin-tools/BADock/BADock.py -a $1 -b $2 -o ./ -x xml_out 1>/dev/null 2>&1" 
 if [ -f "$output_dir/xml_out.xml" ]; then
   cp "$output_dir/xml_out.xml" "$3"
 else

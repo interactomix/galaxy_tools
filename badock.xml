@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command interpreter="sh">
-		sh ./badock.sh $struct_a $struct_b $out_xml 
+		./badock.sh $struct_a $struct_b $out_xml 
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
