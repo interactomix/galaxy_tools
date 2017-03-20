@@ -1,6 +1,6 @@
 #!/bin/sh
-PYTHON="/interactomix/bin-tools/iLoops/venv/bin/python"
-ILOOPS="/interactomix/bin-tools/iLoops/iLoops.py"
+PYTHON="/interactomix/bin-tools/iLoops13/venv/bin/python"
+ILOOPS="/interactomix/bin-tools/iLoops13/iLoops.py"
 # Create a temporary file
 output_dir=$(sg interactomix -c "mktemp -d /interactomix/outputs-tools/ILOOPS/XXXXXX")
 cd "$output_dir"
