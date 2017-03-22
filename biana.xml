@@ -1,7 +1,7 @@
 <tool id="interactomix_biana" name="BIANA" version="0.1">
 	<description>
 	</description>
-	<command interpreter="sh">
+	<command>
 		./biana.sh $iseed $radius $stype $ttype $taxid $r $out_nodes $out_edges $out_translations
 	</command>
 	<environment_variables>
