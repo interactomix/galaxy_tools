@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command>
-		./biana.sh $iseed $radius $stype $ttype $taxid $r $out_nodes $out_edges $out_translations
+		./biana.sh $iseed $radius $stype $ttype $taxid $out_nodes $out_edges $out_translations $r
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
