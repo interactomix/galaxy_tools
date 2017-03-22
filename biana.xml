@@ -1,9 +1,18 @@
 <tool id="interactomix_biana" name="BIANA" version="0.1">
 	<description>
 	</description>
-	<command>
-		./biana.sh $iseed $radius $stype $ttype $taxid $out_nodes $out_edges $out_translations $r
-	</command>
+	<command><![CDATA[
+BIANA="/interactomix/bin-tools/BIANA/generate_netscore_files.py"
+PYTHONPATH=$PYTHONPATH:/usr/lib/python2.7/site-packages:/interactomix/bin/BIANA 
+sg interactomix -c "python2 $BIANA \
+-iseed $iseed \
+-radius $radius \
+-stype $stype \
+-ttype $ttype \
+-taxid $taxid \
+-node $out_node -edge $out_edge -trans $out_trans \
+$9"
+		]]></command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
 	</environment_variables>
