@@ -1,9 +1,7 @@
 <tool id="interactomix_bips" name="BIPS" version="0.1">
 	<description>
 	</description>
-	<command interpreter="sh">
-		python /interactomix/bin-tools/BIPS/execute_bips_wrapper.py -i $in -it $in_type -tax $tax_id -ot $out_type -out $out
-	</command>
+	<command>/usr/bin/python /interactomix/bin-tools/BIPS/execute_bips_wrapper.py -i '$in' -it '$in_type' -tax '$tax_id' -ot '$out_type' -out '$out'</command>
 	<inputs>
 		<param name="in" type="data" label="Input File"/>
 		<param name="in_type" type="select" label="Input Type">
@@ -12,7 +10,7 @@
 			<option value="uniprotaccession">Uniprot Accession</option>
 			<option value="genesymbol">Gene Symbol</option>
 		</param>
-		<param name="tax_id" type="string" label="Tax ID"/>
+		<param name="tax_id" type="text" label="Tax ID"/>
 		<param name="out_type" type="select" label="Output Type">
 			<option value="uniprotentry">Uniprot Entry</option>
 			<option value="uniprotaccession">Uniprot Accession</option>
