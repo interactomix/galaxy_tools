@@ -25,7 +25,7 @@ $RM $tmp_pdbfile
 
 output_dir=$run_output
 
-fb_result=$($LS "${output_dir}"/RESULTS/fb_results_PROTEIN*)
+fb_result=$($LS "${output_dir}"/XLS/prediction.tab)
 pdb_result=$($LS "${output_dir}"/PDB/RESULT/PROTEIN_*.pdb)
 #xls_result=
 
