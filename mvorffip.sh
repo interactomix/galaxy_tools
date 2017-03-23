@@ -16,7 +16,8 @@ PERL5LIB="/interactomix/bin-tools/MORFFIP"
 tmp_pdbfile="$($MKTEMP galaxy_tmpXXXXXX.pdb)"
 $CP $1 $tmp_pdbfile 
 
-run_output=$(sg interactomix -c "PERL5LIB=$PERL5LIB $PERL $MVORFFIP $tmp_pdbfile 2> /dev/null")
+cd $(dirname ${tmp_pdbfile})
+run_output=$(sg interactomix -c "PERL5LIB=$PERL5LIB $PERL $MVORFFIP $(basename $tmp_pdbfile) 2> /dev/null")
 if [ $? -ne 0 ]; then
 	exit 1
 fi
