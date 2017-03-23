@@ -7,7 +7,7 @@ CP="/bin/cp"
 RM="/bin/rm"
 MKTEMP="/usr/bin/mktemp"
 
-PERL5LIB="/interactomix/bin-tools/MORFFIP"
+PERL5LIB="/interactomix/bin-tools/MVORFFIP"
 
 # Vorffip expects the file to have either no file extension, or an extension
 # .pdb.  To appease it, copy the input file to a temporary location with the correct
