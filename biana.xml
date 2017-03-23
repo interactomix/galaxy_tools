@@ -38,7 +38,7 @@ $r"
 			<option value="pdb">PDB</option>
 			<option value="proteinsequence">Protein Sequence</option>
 		</param>
-		<param name="taxid" type="select" label="Taxonomy Code">
+		<param name="taxid" type="select" label="Species Restriction">
 			<option value="9606">Homo Sapiens</option>
 			<option value="10090">Mus Musculus</option>
 			<option value="10116">Rattus Norvegicus</option>
@@ -47,7 +47,7 @@ $r"
 			<option value="559292">Saccharomyces Cerevisiae</option>
 			<option value="3702">Arabidopsis Thaliana</option>
 		</param>
-		<param name="r" type="select" label="Method Restrections">
+		<param name="r" type="select" label="Method Restrictions">
 			<option value="">All available</option>
 			<option value="-rY2H">Two hybrid</option>
 			<option value="-rAFF">Affinity methods</option>
@@ -56,10 +56,72 @@ $r"
 		</param>
 	</inputs>
 	<outputs>
-		<data name="out_nodes" format="txt" />
-		<data name="out_edges" format="txt" />
-		<data name="out_translations" format="txt" />
+		<data name="out_nodes" format="txt" label="Nodes of BIANA on ${on_string}"/>
+		<data name="out_edges" format="txt" label="Edges of BIANA on ${on_string}"/>
+		<data name="out_translations" format="txt" label="Translations of BIANA on ${on_string}"/>
 	</outputs>
 	<help><![CDATA[
+	Biologic Interactions And Network Analysis
+	==========================================
+	BIANA is a integration and network management framework of interactomics
+	data. The integration protocol uses a high level abstraction schema where
+	any data source, i.e. a database of interactomics data (e.g. IntAct),
+	included in BIANA is defined as an external database, where both
+	participants and relations are considered as external entities,
+	characterized by several attributes. BIANA's unique unification protocol,
+	a set of rules that determine how data in various data sources are
+	combined, and its traceability, i.e. the attributes contained in each
+	unified entity can always be traced back to its original source.
+	This properties allow BIANA to offer the possibility to the user to
+	create its own unification protocols, a feature missing in most database
+	unification frameworks.
+
+	Inputs
+	======
+	Biana takes a single file as input, along with a number of parameters.
+
+	Seeds
+	-----
+	These are the bioentities for which BIANA will search for interactions.
+	They are passed in a single file, one entity per line.  An example file
+	might look like this:
+
+	HDA1_YEAST
+	MNP1_YEAST
+	HSP92_YEAST
+
+	Seed Type
+	---------
+	This is the type of identifiers specified in the seeds file.
+
+	Radius
+	------
+	The radius represents the depth of the generated network (tree).  A radius
+	of 1 will create a network containing the seeds and their direct interaction
+	partners.  A depth of 2 will also contain the interactions partners of
+	interaction partners etc.  The size of the network grows exponentially with
+	radius, expect longer computation times for large radii.  A radius of 0
+	creates a network without depth limit, needless to say this will take a long
+	time.
+
+	Method Restrictions
+	-------------------
+	You can restrict the methods that BIANA uses to predict interactions.
+
+	Species Restrictions
+	-------------
+	This option restricts the network of interactions to those entities of the
+	chosen species.
+	
+	Output Translation Type
+	-----------------------
+	The output identifier type you want to use for the output.
+	
+	Output
+	======
+	This tool produces three output files. One contains a list of nodes of the
+	generated network, one contains a list of edges and the last contains
+	translations from the BIANA codes used in the other files to identifiers
+	of the output translation type.  The files are space separated.
 	]]></help>
 </tool>
