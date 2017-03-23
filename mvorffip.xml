@@ -1,4 +1,4 @@
-<tool id="interactomix_morffip" name="MORFFIP" version="0.1">
+<tool id="interactomix_morffip" name="MVORFFIP" version="0.1">
 	<description>
 	</description>
 	<command interpreter="sh">
