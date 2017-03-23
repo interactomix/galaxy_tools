@@ -11,14 +11,14 @@
 		<param format="pdb" type="data" name="pdbfile" label="PDB File"/>
 	</inputs>
 	<outputs>
-		<data format="tabular" name="pbs_tab_output" />
-		<data format="tabular" name="ebs_tab_output" />
-		<data format="tabular" name="dbs_tab_output" />
-		<data format="tabular" name="rbs_tab_output" />
-		<data format="pdb" name="pbs_output" />
-		<data format="pdb" name="ebs_output" />
-		<data format="pdb" name="dbs_output" />
-		<data format="pdb" name="rbs_output" />
+		<data format="tabular" name="pbs_tab_output" label="Prediction of protein interfaces of ${on_string}"/>
+		<data format="tabular" name="ebs_tab_output" label="Prediction of peptide interfaces of ${on_string}"/>
+		<data format="tabular" name="dbs_tab_output" label="Prediction of DNA interfaces of ${on_string}"/>
+		<data format="tabular" name="rbs_tab_output" label="Prediction of RNA interfaces of ${on_string}"/>
+		<data format="pdb" name="pbs_output" label="Protein binding site predition of ${on_string}"/>
+		<data format="pdb" name="ebs_output" label="Peptide binding site predition of ${on_string}"/>
+		<data format="pdb" name="dbs_output" label="DNA binding site predition of ${on_string}"/>
+		<data format="pdb" name="rbs_output" label="RNA binding site predition of ${on_string}"/>
 	</outputs>
 	<help><![CDATA[
 General Information
@@ -38,6 +38,8 @@ considering all chains as a single one.
 
 Outputs
 ^^^^^^^
-TODO
+MVORFFIP will produce eight output files.  These files contain the predition
+of interfaces and binding sites for proteins, peptides, DNA and RNA in tab
+separated and PDB format respectively.
 	]]></help>
 </tool>
