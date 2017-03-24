@@ -21,5 +21,44 @@
 		<data name="out"/>
 	</outputs>
 	<help><![CDATA[
+Introduction
+^^^^^^^^^^^^
+The hyopthesis used by BIPS is that two proteins (A and B) interact if there
+exists a known interaction between two proteiens (A' and B') such that A is
+similar to A' and B is similar to B'.  The known interactions between A' and
+B' is called the *template interaction*. In BIPS, protein A is the *user query
+protein* and protein B is the *predicted target protein*.  The basis of the hypothesis
+is to assume the similar behavior of homolog proteins.  The approach uses sequence
+similarity between proteins based on the sequence alignment.  We align the sequences
+of two proteins to measure their similarity as a function of the percentage of
+identical residues and the percentage of their sequence being aligned (for example
+using 60% identity and 70% of the total length of the target protein and 90%
+of the template).  Template sequence coverage is always fixed to 90%.
+
+In a second approach we measure the similarity of the target sequences (A and B)
+with PFAM domains as a function of the e-value calculated with the package.  This
+results in the assignation of one or several PFAM domains to the query and target
+sequences.  Then, we use the database of iPfam and 3DiD to check for domain-domain
+interactions.  We hypothesize that A interacts with B if a domain A' can be assigned
+to A and a domain B' to B such that A' and B' are interacting domains in iPfam or
+3DiD.  Furhermore, it has been shown that the specificity of some interactions depends
+on a set of interacting domains.  Therefore, the most restrictive set of predictions will be those
+for which both criteria of similarity are required,  using stringent values of
+sequence identity, coverage and domain assignation.
+
+Inputs
+^^^^^^
+Input is a single file containing the query proteins.  This file is either a fasta
+file containing their sequences, or a file containing standard protein identifiers.
+The type of the file must be specified in the input type parameter.
+
+It is also possible to limit the predictions to those of a particular species as
+well as specify the type of the output.
+
+Output
+^^^^^^
+The output is a single file containing a list of protein identifiers of the type
+specified.  These proteins are the predicted target proteins.
+
 	]]></help>
 </tool>
