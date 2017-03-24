@@ -86,9 +86,11 @@ These are the bioentities for which BIANA will search for interactions.
 They are passed in a single file, one entity per line.  An example file
 might look like this:
 
-HDA1_YEAST
-MNP1_YEAST
-HSP92_YEAST
+::
+
+    HDA1_YEAST
+    MNP1_YEAST
+    HSP92_YEAST
 
 Seed Type
 ---------
@@ -109,7 +111,7 @@ Method Restrictions
 You can restrict the methods that BIANA uses to predict interactions.
 
 Species Restrictions
--------------
+--------------------
 This option restricts the network of interactions to those entities of the
 chosen species.
 
