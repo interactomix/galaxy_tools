@@ -43,6 +43,33 @@
 	<outputs>
 		<data name="out_xml" format="xml"/>
 	</outputs>
-	<help><![CDATA[
+<help><![CDATA[
+Inputs
+^^^^^^
+Sequences
+---------
+A fasta file containing a set of sequences.  The first word of the header line
+of each sequence is used as the identifier code for that protein.
+
+Interactions
+------------
+This file contains a list of protein pairs.  Each line is a protein identifier
+code (see above) followed by a double colon ``::'', followed by another protein
+identifier code.  For instance: ``protein1::protein2''.
+
+Grouping
+--------
+TODO 
+
+Domain Type
+-----------
+The domain to be mapped on the given sequences.
+
+Cost
+----
+This is the relative cost of false predictions, in reference to the random
+forest classifier.  Increasing this value will improve the positive prediction
+value of the prediction, but will tend to decrease the true positive rate.
+
 	]]></help>
 </tool>
