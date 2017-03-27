@@ -54,8 +54,8 @@ of each sequence is used as the identifier code for that protein.
 Interactions
 ------------
 This file contains a list of protein pairs.  Each line is a protein identifier
-code (see above) followed by a double colon ("""::"""), followed by another protein
-identifier code.  For instance: """protein1::protein2""".
+code (see above) followed by a double colon (::), followed by another protein
+identifier code.  For instance: protein1::protein2.
 
 Grouping
 --------
