@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command detect_error="exit_code">
-		$__tool_directory__/vorffip.sh $pdbfile $fb_output $pdb_output
+		sh -e $__tool_directory__/vorffip.sh $pdbfile $fb_output $pdb_output
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>

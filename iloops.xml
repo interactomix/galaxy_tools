@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command detect_errors="exit_code">
-		./iloops.sh $fasta $query $grouping $domain $cost $out_xml
+		sh -e $__tool_directory__/iloops.sh $fasta $query $grouping $domain $cost $out_xml
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
