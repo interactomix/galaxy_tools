@@ -1,7 +1,7 @@
 <tool id="interactomix_iloops" name="ILoops" version="0.1">
 	<description>
 	</description>
-	<command interpreter="sh">
+	<command detect_errors="exit_code">
 		./iloops.sh $fasta $query $grouping $domain $cost $out_xml
 	</command>
 	<environment_variables>
