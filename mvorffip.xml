@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command detect_errors="exit_code">
-		mvorffip.sh $pdbfile $pbs_tab_output $ebs_tab_output $dbs_tab_output $rbs_tab_output $pbs_output $ebs_output $dbs_output $rbs_output
+		$__tool_directory__/mvorffip.sh $pdbfile $pbs_tab_output $ebs_tab_output $dbs_tab_output $rbs_tab_output $pbs_output $ebs_output $dbs_output $rbs_output
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
