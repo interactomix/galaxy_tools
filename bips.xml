@@ -24,7 +24,7 @@
 Introduction
 ^^^^^^^^^^^^
 The hyopthesis used by BIPS is that two proteins (A and B) interact if there
-exists a known interaction between two proteiens (A' and B') such that A is
+exists a known interaction between two proteins (A' and B') such that A is
 similar to A' and B is similar to B'.  The known interactions between A' and
 B' is called the *template interaction*. In BIPS, protein A is the *user query
 protein* and protein B is the *predicted target protein*.  The basis of the hypothesis
