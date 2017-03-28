@@ -44,6 +44,26 @@
 		<data name="out_xml" format="xml"/>
 	</outputs>
 <help><![CDATA[
+Introduction
+^^^^^^^^^^^^
+Protein-protein interaction (PPI) has been described as one of the main
+processes by which proteins perform their cellular functions. Thus, correctly
+identifying the PPI network (or protein interactome) of a given organism would
+be useful both to understand the key molecular mechanisms behind a biological
+function and to assign a function to an unknown protein based on its
+interactions. The iLoops Server uses the loop classification as defined
+in `ArchDB <http://sbi.imim.es/archdb/>`_ and/or the `SCOP <http://scop.mrc-lmb.cam.ac.uk/scop/>`_
+classification of domains to predict whether or not
+a pair of proteins interact. The method uses data from both known interactions
+and putative no-interactions (NIPs) identified as co-localized, non-redundant,
+non-interacting random pairs of proteins non-similar to PPIs to define
+interacting (positive) or non-interacting (negative) relations between
+groups of similar structural features of different proteins. Several
+parameters extracted from the positive and negative interaction signatures
+(the ratio of the number of signatures or the ratio of their top p-value
+among them) are submitted to a random forest analysis to describe if there
+is or not an interaction.
+
 Inputs
 ^^^^^^
 Sequences
