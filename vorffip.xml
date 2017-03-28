@@ -1,7 +1,7 @@
 <tool id="interactomix_vorffip" name="VORFFIP" version="0.1">
 	<description>
 	</description>
-	<command interpreter="sh">
+	<command detect_error="exit_code">
 		vorffip.sh $pdbfile $fb_output $pdb_output
 	</command>
 	<environment_variables>
