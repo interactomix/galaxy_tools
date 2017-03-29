@@ -24,3 +24,4 @@ done
 
 $CP ${output_dir}/results.txt $5
 $CP ${output_dir}/b_factors.pdb $6
+$CP ${output_dir}/contacts.csu.txt $7

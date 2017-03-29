@@ -2,7 +2,7 @@
 	<description>
 	</description>
 	<command detect_error="exit_code">
-		sh -e $__tool_directory__/pcrpi.sh $pdbfile $chainid $bayesian_type $training_set $results_output $pdb_output
+		sh -e $__tool_directory__/pcrpi.sh $pdbfile $chainid $bayesian_type $training_set $results_output $pdb_output $contacts_output
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
@@ -20,8 +20,12 @@
 		</param>
 	</inputs>
 	<outputs>
-		<data format="tabular" name="results_output" />
-		<data format="pdb" type="data" name="pdb_output" />
+		<data format="tabular" name="results_output"
+			  label="Predicted hot-spot residues on ${on_string}"/>
+		<data format="pdb" type="data" name="pdb_output"
+			  label="B-Factor substituted pdb file on ${on_string}"/>
+		<data format="txt" type="data" name="contacts_output"
+			  label="Atomic interactions on ${on_string}"/>
 	</outputs>
 	<help><![CDATA[
 General Information
