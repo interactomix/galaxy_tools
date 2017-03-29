@@ -1,8 +1,8 @@
 <tool id="interactomix_pcrpi" name="PCRPI" version="0.1">
 	<description>
 	</description>
-	<command interpreter="sh">
-		pcrpi.sh $pdbfile $chainid $bayesian_type $training_set $results_output $pdb_output
+	<command detect_error="exit_code">
+		sh -e $__tool_directory__/pcrpi.sh $pdbfile $chainid $bayesian_type $training_set $results_output $pdb_output
 	</command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
