@@ -24,7 +24,7 @@
 			  label="Predicted hot-spot residues on ${on_string}"/>
 		<data format="pdb" type="data" name="pdb_output"
 			  label="B-Factor substituted pdb file on ${on_string}"/>
-		<data format="txt" type="data" name="contacts_output"
+		<data format="tabular" type="data" name="contacts_output"
 			  label="Atomic interactions on ${on_string}"/>
 	</outputs>
 	<help><![CDATA[
