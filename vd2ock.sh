@@ -2,7 +2,7 @@
 
 tmp_outdir=$(mktemp -d /interactomix/outputs-tools/VD2OCK/XXXXXX)
 
-PERL5LIB="/interactomix/bin-tool/VD2OCK:$PERL5LIB" perl /interactomix/bin-tool/run_vd2ock.pl \
+PERL5LIB="/interactomix/bin-tools/VD2OCK:$PERL5LIB" perl /interactomix/bin-tools/VD2OCK/run_vd2ock.pl \
 	$1 \
 	$2 \
 	$(dirname $tmp_outdir) \
