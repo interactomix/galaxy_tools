@@ -1,20 +1,9 @@
-<tool id="interactomix_vd2dock" name="VD2DOCK" version="0.1">
+<tool id="interactomix_vd2dock" name="VD2OCK" version="0.1">
 	<description>
 	</description>
 	<command detect_errors="exit_code"><![CDATA[
-tmp_outdir = $(mktemp -d /interactomix/output-tools/VD2DOCK/XXXXXX)
-PERL5LIB="/interactomix/bin-tool/VD2OCK:$PERL5LIB" perl run_vd2ock.pl 
-$pdb_a
-$pdb_b
-$(dirname ${tmp_outdir})
-$(basename ${tmp_outdir})
-$tolerance
-$scoring_function
-
-cat $(ls ${tmp_outdir}/out_rot_* | grep -Ev -e ".*\.sp" -e ".*\.zr\.out") > $patchdock_scores
-cat ${tmp_outdir}/out_rot*.sp > $splitpotential_scores
-cat ${tmp_outdir}/out_rot*.zr.out > $zrank_scores
-    
+	sh -e $__tool_directory__/vd2ock.sh $pdb_a $pdb_b $tolerance
+	$scoring_function $patchdock_scores $splitpotential_scores $zrank_scores
 		]]></command>
 	<environment_variables>
 		<environment_variable name="TERM">linux</environment_variable>
