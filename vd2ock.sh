@@ -1,6 +1,6 @@
 #!/bin/sh
 
-tmp_outdir = $(mktemp -d /interactomix/output-tools/VD2OCK/XXXXXX)
+tmp_outdir = $(mktemp -d /interactomix/outputs-tools/VD2OCK/XXXXXX)
 
 PERL5LIB="/interactomix/bin-tool/VD2OCK:$PERL5LIB" perl run_vd2ock.pl \
 	$1 \
