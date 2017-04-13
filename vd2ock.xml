@@ -27,11 +27,11 @@
 		</param>
 	</inputs>
 	<outputs>
-		<data name="patchdock_scores"/>
-		<data name="splitpotential_scores">
+		<data name="patchdock_scores" format="txt"/>
+		<data name="splitpotential_scores" format="txt">
 			<filter>scoring_function == "2" or scoring_function == "3"</filter>
 		</data>
-		<data name="zrank_scores">
+		<data name="zrank_scores" format="txt">
 			<filter>scoring_function == "1" or scoring_function == "3"</filter>
 		</data>
 	</outputs>
