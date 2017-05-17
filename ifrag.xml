@@ -8,8 +8,8 @@
 		<environment_variable name="TERM">linux</environment_variable>
 	</environment_variables>
 	<inputs>
-		<param type="string" name="seq_1" label="Sequence 1"/>
-		<param type="string" name="seq_2" label="Sequence 2"/>
+		<param type="text" name="seq_1" label="Sequence 1"/>
+		<param type="text" name="seq_2" label="Sequence 2"/>
 		<param format="fasta" type="data" name="fasta" label="Fasta File"/>
 		<param type="select" name="coverage_hits" label="Coverage" 
 			help="Coverage of alignment between query and hit sequences">
