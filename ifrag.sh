@@ -5,7 +5,7 @@ ECHO="/bin/echo"
 CP="/bin/cp"
 RM="/bin/rm"
 MKTEMP="/usr/bin/mktemp"
-IFRAG="/interactomix/bin-tools/IFRAGs/run_ifrags.pl"
+IFRAG="/interactomix/bin-tools/IFRAGS/run_ifrags.pl"
 
 cd /interactomix/bin-tools/IFRAGS
 run_output=$(sg interactomix -c "$PERL $IFRAG $1 $2 $3 $4 $5 $6")
