@@ -22,7 +22,7 @@ out1="$output_dir/$code/interactionID.output"
 out2="$output_dir/$code/$code.output"
 
 for f in $out1 $out2; do
-  if [ ! -f $f]; then
+  if [ ! -f $f ]; then
     exit 1;
   fi
 done
