@@ -1,0 +1,52 @@
+<tool id="interactomix_ifrag" name="IFRAG" version="0.1">
+	<description>
+	</description>
+	<command detect_errors="exit_code">
+		sh -e $__tool_directory__/ifrag.sh $seq_1 $seq_2 $fasta $coverage_hits $sequence_id_hits $evalue $interactionid $out
+	</command>
+	<environment_variables>
+		<environment_variable name="TERM">linux</environment_variable>
+	</environment_variables>
+	<inputs>
+		<param type="string" name="seq_1" label="Sequence 1"/>
+		<param type="string" name="seq_2" label="Sequence 2"/>
+		<param format="fasta" type="data" name="fasta" label="Fasta File"/>
+		<param type="select" name="coverage_hits" label="Coverage" 
+			help="Coverage of alignment between query and hit sequences">
+			<option value="100">100</option>
+			<option value="90">90</option>
+			<option value="80">80</option>
+			<option value="70">70</option>
+			<option value="60">60</option>
+			<option value="50">50</option>
+			<option value="40">40</option>
+			<option value="30">30</option>
+		</param>
+		<param type="select" name="sequence_id_hits" label="Sequence"
+			help="Sequence identity between hits and query sequences">
+			<option value="100">100</option>
+			<option value="90">90</option>
+			<option value="80">80</option>
+			<option value="70">70</option>
+			<option value="60">60</option>
+			<option value="50">50</option>
+			<option value="40">40</option>
+			<option value="30">30</option>
+		</param>
+		<param type="select" name="evalue" label="Evalue"
+			help="Evalue cut-off blast search">
+			<option value="0.0001">0.0001</option>
+			<option value="0.001">0.001</option>
+			<option value="0.1">0.1</option>
+			<option value="1">1</option>
+			<option value="10">10</option>
+			<option value="100">100</option>
+		</param>
+	</inputs>
+	<outputs>
+		<data format="txt" name="interactionid" label="Prediction of protein interfaces of ${on_string}"/>
+		<data format="txt" name="out" label="Prediction of peptide interfaces of ${on_string}"/>
+	</outputs>
+	<help><![CDATA[
+	]]></help>
+</tool>
